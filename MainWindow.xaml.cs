@@ -20,21 +20,21 @@ namespace Animation_Speed_Calculator
     /// </summary>
     public partial class MainWindow : Window
     {
+        /// <summary>
+        /// Initialize and populate MainWindow
+        /// </summary>
         public MainWindow()
         {
-            
             InitializeComponent();
-
             SetDirectionsText();
-            
-
-
-
         }
 
+
+        /// <summary>
+        /// Set the text for steps to use application
+        /// </summary>
         private void SetDirectionsText()
         {
-
             TXT_Step1.Text = "1: Select right or left foot where you can see foot placed and removed\nfrom ground in animation.";
             TXT_Step2.Text = "2: Set/Verify working with world coordinates.";
             TXT_Step3.Text = "3: Find time where foot from step 1 is placed on ground,\nenter time and location for the axis the foot is moving.";
@@ -42,6 +42,12 @@ namespace Animation_Speed_Calculator
             TXT_Step5.Text = "5: Click Calculate to see result.";
         }
 
+
+        /// <summary>
+        /// Clear all of the user entry fields
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BTN_Clear_Click(object sender, RoutedEventArgs e)
         {
             TB_PlacedOnGroundTime.Clear();
@@ -53,6 +59,12 @@ namespace Animation_Speed_Calculator
             LBL_Result.Content = string.Empty;
         }
 
+
+        /// <summary>
+        /// Calculate animation speed based on user entered data
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BTN_Calculate_Click(object sender, RoutedEventArgs e)
         {
             LBL_Result.Content = string.Empty;
@@ -80,13 +92,9 @@ namespace Animation_Speed_Calculator
                 return;
             }
  
-
             Result = Math.Abs((DistanceEnd - DistanceStart) / (TimeEnd - TimeStart));
             LBL_Result.Content = Result.ToString();
-
-            
-        }
-
-        
+           
+        }        
     }
 }
