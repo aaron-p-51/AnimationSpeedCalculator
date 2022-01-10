@@ -4,6 +4,7 @@ Tool to find character animation speed when not using root motion
 Release build can be found in exe/Animation Speed Calculator.exe
 
 Use Instructions:
+
 1: Select right or left foot where you can see foot placed and removed\nfrom ground in animation.
 
 2: Set/Verify working in world coordinates.
