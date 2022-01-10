@@ -29,19 +29,17 @@ namespace Animation_Speed_Calculator
             SetDirectionsText();
         }
 
-
         /// <summary>
         /// Set the text for steps to use application
         /// </summary>
         private void SetDirectionsText()
         {
             TXT_Step1.Text = "1: Select right or left foot where you can see foot placed and removed\nfrom ground in animation.";
-            TXT_Step2.Text = "2: Set/Verify working with world coordinates.";
+            TXT_Step2.Text = "2: Set/Verify working in world coordinates.";
             TXT_Step3.Text = "3: Find time where foot from step 1 is placed on ground,\nenter time and location for the axis the foot is moving.";
-            TXT_Step4.Text = "4: Find timer where foot from step 2 is removed from the ground,\nenter time and location for the axis the foot is moving.";
-            TXT_Step5.Text = "5: Click Calculate to see result.";
+            TXT_Step4.Text = "4: Find time where foot from step 2 is removed from the ground,\nenter time and location for the axis the foot is moving.";
+            TXT_Step5.Text = "5: Click Calculate to see results!";
         }
-
 
         /// <summary>
         /// Clear all of the user entry fields
@@ -58,7 +56,6 @@ namespace Animation_Speed_Calculator
 
             LBL_Result.Content = string.Empty;
         }
-
 
         /// <summary>
         /// Calculate animation speed based on user entered data
